@@ -1,5 +1,5 @@
 body{
-    margin: 0px;
+    margin: 0;
     background-color: #a8bcb3;
 }
 /*A partir daqui temos todas as informações que envolvem o menu da página*/
@@ -9,18 +9,17 @@ header{
     align-items: center;
     width: auto;
     height: 140px;
-    
     /* Adiciona uma sombra na parte inferior */
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.3);
 }
 /*Aqui é a única informação do logo*/
 .logo{
-    width:190px;
+    width: 190px;
     height: auto;
 }
 .logo img{
-    height:250px;
-    width:auto;
+    height: 250px;
+    width: auto;
     margin-left: 30px;
 }
 
@@ -49,36 +48,43 @@ header{
     border-right: 2px solid white;
 }
 #blog{
-    border-right:none;
+    border-right: none;
 }
 
 /*A partir daqui temos as informações da barra de pesquisa*/
-.search{
+.search input{
     display: flex;
     border: 1px solid transparent;
     align-items: center;
     height: 51px;
-    width:200px;
+    width: 200px;
     border-radius: 10px;
     background-color: #FFFFFF;
     color: #5b6b66;
-    padding: 0px 30px;
+    padding: 0px 15px;
     margin-right: 50px;
+    margin-top: 8px;
     margin-left: 5px;
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
-    
 }
 .search img{
-    padding: 10px;
-    width:auto;
-    height:47px;
+    padding: 5px;
+    width: auto;
+    height: 29px;
 }
-#banner{
-    background-color: #FFFFFF;
-    padding: 300px;
-    margin-top: 50px;
+.search button{
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    margin-top: -50px;
+    margin-left: 180px;
+    position: absolute;
+}
+.banner img{
+    margin-top: 60px;
+    height: auto;
+    width: 100%;
 }
 .nossos-profissionais{
     align-items: center;
@@ -103,20 +109,33 @@ header{
     margin-top: 100px;
     margin-left: 360px;
 }
-.nossos-profissionais{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.img-nossos-profissionais img{
+    display: inline;
+    /* justify-content: space-between; */
+    margin: 30px 70px;
+}
+.img-nossos-profissionais{
+    margin: 30px 120px 20px 140px;
+}
+.nomes-profissionais p{
+    display: inline;
+    font-family: Anonymous Pro;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #5b6b66;
 }
 .nomes-profissionais{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 65px;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 24px;
-    color: #5b6b66;
+    margin: 0 120px 30px 140px;
+    text-align: center;
+}
+.nomes-profissionais-um{
+    margin: 0 130px 30px 55px;
+}
+.nomes-profissionais-dois{
+    margin: 0 120px 30px 45px;
+}
+.nomes-profissionais-tres{
+    margin: 0 90px 30px 40px;
 }
 .titulo-principal-noticias{
     text-align: center;
@@ -131,12 +150,13 @@ header{
     margin-left: 50px;
 }
 .noticias{
-    background-color:#fafffe74;
+    background-color: #fafffe74;
     height: 420px;
     width: 100%;
     font-family: Inter;
-    color:#5b6b66;
-    font-size: 36px;
+    color: #5b6b66;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .noticias img{
     width: 362px;
@@ -145,12 +165,31 @@ header{
     background-color: #FFFFFF;
     margin: 30px;
 }
+.noticia-meio{
+    background-color: #fafffe74;
+    height: 420px;
+    width: 100%;
+    font-family: Inter;
+    color: #5b6b66;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.noticia-meio img{
+    width: 362px;
+    height: 345px;
+    opacity: 100%;
+    background-color: #FFFFFF;
+    margin: 30px 1115px;
+}
+.noticia-meio p{
+    margin-left: 30px; 
+}
 .titulo-noticia{
     font-weight: 600;
     margin-left: 430px;
     margin-top: -350px;
-    border-bottom: 1px solid #5b6b66;
-    width: 418px;
+    text-decoration: underline 1px;
+    text-underline-offset: 20%;
 }
 .texto-noticia{
     font-weight: 400;
@@ -162,10 +201,9 @@ header{
     align-items: center;
     background-color: #5b6b66;
     margin: 0;
-    margin-bottom: none;
     font-family: Inter;
-    color:#FFFFFF;
-    font-size: 24px;
+    color: #FFFFFF;
+    font-size: 20px;
     font-weight: 400;
     max-height: 376px;
 }
@@ -177,20 +215,36 @@ header{
 .icones-rodape{
     display: flex;
     flex-direction: column;
-    width:80px;
-    height:auto;
-    margin-left: 90px;
+    width: 80px;
+    height: auto;
+    margin-left: 60px;
+}
+.icones-rodape a{
+    text-decoration: none;
 }
 .texto-icones-rodape{
     display: flex;
     flex-direction: column;
-    margin-left: 110px;
+    margin-left: 80px;
+    margin-top: 20px;
+    width: 250px;
+}
+.texto-icones-rodape a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.texto-icones-rodape p{
+    margin-bottom: 23px;
 }
 .texto-adicional{
     display: flex;
     flex-direction: column;
-    margin-left: 240px;
-    margin-top: -70px;
+    margin-left: 110px;
+    margin-top: -100px;
+}
+.texto-adicional a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 
