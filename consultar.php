@@ -79,7 +79,7 @@ $result = $conn->query($sql);
     </table>
 
     <br>
-    <a href="index.html">Voltar</a>
+    <a href="login.php">Voltar</a>
 </center>
 
 </body>
