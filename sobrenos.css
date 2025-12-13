@@ -212,3 +212,143 @@ body {
     text-align: left;
 
 }
+
+/* Responsividade no celular */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* Título principal */
+    .titulo-nossos-profissionais {
+        font-size: 2.5rem;
+        margin: 8% 5%;
+    }
+
+    /* Bloco principal (imagem + texto) */
+    .bloco-um-nosso-espaco {
+        flex-direction: column;
+        text-align: center;
+        gap: 6%;
+        margin-bottom: 8dvh;
+    }
+
+    .bloco-um-nosso-espaco img {
+        width: 60vw;
+    }
+
+    .titulo-texto {
+        width: 80vw;
+        align-items: center;
+    }
+
+    .titulo-um {
+        font-size: 2rem;
+    }
+
+    .bloco-um-nosso-espaco p {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    /* Botão */
+    #botao {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Bloco de imagens */
+    .bloco-dois-nosso-espaco {
+        flex-direction: column;
+        gap: 5%;
+        padding-top: 10%;
+    }
+
+    .bloco-dois-nosso-espaco img {
+        width: 60vw;
+        margin-bottom: 5dvh;
+    }
+
+    /* Endereço */
+    #endereco {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
+        gap: 5%;
+    }
+
+    #endereco iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    #endereco .titulo-texto {
+        width: 100%;
+        padding-top: 0;
+        align-items: center;
+    }
+}
+
+/* Responsividade no tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Título */
+    .titulo-nossos-profissionais {
+        font-size: 2.8rem;
+    }
+
+    /* Bloco principal */
+    .bloco-um-nosso-espaco {
+        flex-direction: column;
+        text-align: center;
+        gap: 6%;
+    }
+
+    .bloco-um-nosso-espaco img {
+        width: 60vw;
+    }
+
+    .titulo-texto {
+        width: 80vw;
+        align-items: center;
+    }
+
+    .bloco-um-nosso-espaco p {
+        text-align: justify;
+    }
+
+    /* Bloco de imagens */
+    .bloco-dois-nosso-espaco {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .bloco-dois-nosso-espaco img {
+        width: 60vw;
+    }
+
+    /* Endereço */
+    #endereco {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+    }
+
+    #endereco iframe {
+        width: 90%;
+    }
+
+    #endereco .titulo-texto {
+        width: 80%;
+        align-items: center;
+    }
+
+    /* Botão */
+    #botao {
+        width: 60%;
+    }
+}
+
+
