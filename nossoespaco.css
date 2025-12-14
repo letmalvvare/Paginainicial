@@ -282,3 +282,32 @@ body {
     }
 }
 
+/* Estado inicial */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando entra na tela */
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Direções */
+.animate-left {
+    transform: translateX(-40px);
+}
+
+.animate-right {
+    transform: translateX(40px);
+}
+
+.animate-left.show,
+.animate-right.show {
+    transform: translateX(0);
+}
+
+
+
