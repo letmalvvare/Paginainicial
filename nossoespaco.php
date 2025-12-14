@@ -16,11 +16,11 @@
 ?>
 
 <body>
-    <h1 class="titulo-nossos-profissionais">NOSSO ESPAÇO</h1>
+    <h1 class="titulo-nossos-profissionais animate">NOSSO ESPAÇO</h1>
 <!--Conteúdo da página-->  
         <section>
            
-            <div class="bloco-um-nosso-espaco">
+            <div class="bloco-um-nosso-espaco animate">
                 <img src="imagens da clinica/Imagem Nosso Espaço (1).jpg" alt="Imagem da clínica">
                 <div class="titulo-texto">
                 <h1 id="titulo-um">Conheça o espaço em que cuidaremos de você</h1>
@@ -38,21 +38,14 @@
                 higiene impecável em cada detalhe, assegurando que você esteja sempre em um ambiente esterilizado e 
                 tecnologicamente avançado.</p> -->
 
-            <div class="bloco-dois-nosso-espaco">
+            <div class="bloco-dois-nosso-espaco animate ">
                 <img src="imagens da clinica/Imagem Nosso Espaço (3).jpg" alt="">
                 <img src="imagens da clinica/Imagem Nosso Espaço (4).jpg" alt="">
                 <img src="imagens da clinica/Imagem Nosso Espaço (5).jpg" alt="">
             </div>
-            
-            <!-- <div class="texto-dois">
-                <p>Dedicamos tempo para ouvir suas expectativas, explicar cada etapa do 
-                seu <br> procedimento e oferecer um acompanhamento atencioso, do pré ao 
-                pós-<br>procedimento. Na Carvi Clinic, você não é apenas um paciente, mas um parceiro na <br>
-                jornada para realçar sua beleza única com <strong>arte, precisão e total confiança</strong>.</p>
-            </div> -->
         </section>
 
-        <div id="endereco">
+        <div id="endereco" class="animate">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.5044752696886!2d-43.36962662489749!3d-22.968469579211774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd9828e978c17%3A0x4401bc4f8e2ca033!2sAv.%20Ator%20Jos%C3%A9%20Wilker%2C%20600%20-%20Jacarepagu%C3%A1%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-024!5e0!3m2!1sen!2sbr!4v1765516176869!5m2!1sen!2sbr" width="50%" height="450" style="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class= "titulo-texto">
         <h2>Endereço: Av. Ator José Wilker, 600 - Jacarepaguá, Rio de Janeiro</h2>
@@ -63,6 +56,28 @@
         <button id="botao"><a href="agendamentosint.php">Agendar consulta</a></button>
         </div>
         </div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate");
+
+            const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            {
+                threshold: 0.2
+            }
+            );
+
+        elements.forEach(el => observer.observe(el));
+        });
+        </script>
+
 </body>
 </html>
 
