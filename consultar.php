@@ -1,102 +1,86 @@
 <?php
-include 'conexao.php';
-include 'proteger.php';
+include "proteger.php";
+include "conexao.php";
 
-// Recebe parâmetros do filtro
+// Captura filtros
 $busca = $_GET['busca'] ?? '';
-$data  = $_GET['data'] ?? '';
+$f_data = $_GET['data'] ?? '';
 
-// Monta a query base
-$query = "SELECT id, nome, telefone, email, data_horario FROM agendamentos";
-$condicoes = [];
-$params = [];
-$tipos = "";
+// Monta query base
+$sql = "SELECT id, nome, telefone, email, data_horario FROM agendamentos WHERE 1=1";
 
-// Filtro de texto (nome, telefone, email)
+// Filtro unificado (nome, telefone e email)
 if (!empty($busca)) {
-    $condicoes[] = "(nome LIKE CONCAT('%', ?, '%') OR telefone LIKE CONCAT('%', ?, '%') OR email LIKE CONCAT('%', ?, '%'))";
-    $params[] = $busca;
-    $params[] = $busca;
-    $params[] = $busca;
-    $tipos .= "sss";
+    $b = $conn->real_escape_string($busca);
+    $sql .= " AND (nome LIKE '%$b%' OR telefone LIKE '%$b%' OR email LIKE '%$b%')";
 }
 
-// Filtro de data
-if (!empty($data)) {
-    $condicoes[] = "DATE(data_horario) = ?";
-    $params[] = $data;
-    $tipos .= "s";
+// Filtro de data (dia inteiro)
+if (!empty($f_data)) {
+    $d = $conn->real_escape_string($f_data);
+    $sql .= " AND DATE(data_horario) = '$d'";
 }
 
-// Aplica filtros se existirem
-if (!empty($condicoes)) {
-    $query .= " WHERE " . implode(" AND ", $condicoes);
-}
-
-$stmt = $conn->prepare($query);
-if (!empty($params)) {
-    $stmt->bind_param($tipos, ...$params);
-}
-$stmt->execute();
-$result = $stmt->get_result();
+$sql .= " ORDER BY data_horario ASC";
+$result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Consultar Agendamentos</title>
+<title>Consulta de Agendamentos</title>
 <link rel="stylesheet" href="styhome.css">
 </head>
 <body>
+
 <center>
+    <h1 class="agendamentoh1">Agendamentos Registrados</h1>
 
-<h1 class="agendamentoh1">Agendamentos</h1>
+    <!-- FORMULÁRIO DE FILTROS -->
+    <div class="form-container" style="width: 500px; margin-bottom: 20px;">
+        <form method="GET" action="consultar.php">
 
-<!-- Filtro -->
-<div class="form-container" style="width:400px; margin-bottom:20px;">
-<form method="GET" action="consultar.php" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-    <input type="text" name="busca" placeholder="Buscar nome, telefone ou email"
-           value="<?= htmlspecialchars($busca) ?>" class="input-field">
+            <label>Buscar (nome, telefone ou e-mail):</label>
+            <input type="text" name="busca" value="<?= htmlspecialchars($busca) ?>">
 
-    <input type="date" name="data" value="<?= htmlspecialchars($data) ?>"
-           class="input-field">
+            <label>Data:</label>
+            <input type="date" name="data" value="<?= htmlspecialchars($f_data) ?>">
 
-    <button type="submit" class="btn">Filtrar</button>
-</form>
-</div>
+            <br><br>
+            <button type="submit">Filtrar</button>
+            <a href="consultar.php" class="botao-limpar">Limpar Filtros</a>
+        </form>
+    </div>
 
-<!-- Tabela -->
-<table border="1" cellpadding="5">
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Telefone</th>
-        <th>Email</th>
-        <th>Data e Horário</th>
-        <th>Ações</th> <!-- COLUNA DOS BOTÕES -->
-    </tr>
+    <!-- TABELA -->
+    <table border="1" cellpadding="8" cellspacing="0" style="width:80%; text-align:center;">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Data e Horário</th>
+            <th>Ações</th>
+        </tr>
 
-    <?php while($row = $result->fetch_assoc()): ?>
-    <tr>
-        <td><?= $row['id'] ?></td>
-        <td><?= htmlspecialchars($row['nome']) ?></td>
-        <td><?= htmlspecialchars($row['telefone']) ?></td>
-        <td><?= htmlspecialchars($row['email']) ?></td>
-        <td><?= htmlspecialchars($row['data_horario']) ?></td>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+        <tr>
+            <td><?= htmlspecialchars($row['nome']) ?></td>
+            <td><?= htmlspecialchars($row['telefone']) ?></td>
+            <td><?= htmlspecialchars($row['email']) ?></td>
+            <td><?= date("d/m/Y H:i", strtotime($row['data_horario'])) ?></td>
+            <td>
+                <a href="agendamento_acao.php?id=<?= $row['id'] ?>">Editar</a> |
+                <a href="agendamento_acao.php?acao=excluir&id=<?= $row['id'] ?>" onclick="return confirm('Excluir este agendamento?')">Excluir</a>
+            </td>
+        </tr>
+        <?php } ?>
 
-        <!-- BOTÕES DE EDIÇÃO E EXCLUSÃO -->
-        <td>
-            <a href="editar_agendamento.php?id=<?= $row['id'] ?>" class="btn-editar">Editar</a>
-            <a href="excluir_agendamento.php?id=<?= $row['id'] ?>" class="btn-excluir"
-               onclick="return confirm('Deseja realmente excluir este agendamento?')">
-               Excluir
-            </a>
-        </td>
-    </tr>
-    <?php endwhile; ?>
+    </table>
 
-</table>
-
+    <br>
+    <a href="login.php">Voltar</a>
 </center>
+
 </body>
 </html>
