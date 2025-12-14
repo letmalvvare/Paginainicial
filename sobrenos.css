@@ -316,6 +316,39 @@ body {
     }
 }
 
+/* Animação base (estado inicial) */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando o elemento aparece */
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variações opcionais */
+.animate-left {
+    transform: translateX(-40px);
+}
+
+.animate-right {
+    transform: translateX(40px);
+}
+
+.animate-left.show,
+.animate-right.show {
+    transform: translateX(0);
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
 
 
 
