@@ -12,11 +12,11 @@
 </head>
 
 <?php
-    include ("header.php"); 
+    include "header.php"; 
 ?>
 <body>
     <!-- Banner página inicial -->
-<section class="banner-container">
+<section class="banner-container animate">
     <a href="agendamentos.php">
     <div class="banner-slide fade">
         <img src="banner/1.png" alt="Banner 1">
@@ -30,31 +30,31 @@
 
     <!-- Apresentação de produtos da Carvi Clinic -->
      <section class="procedimentos-home">
-        <h1>Carvi Clinic: conheça nosso trabalho</h1>
-        <p style="background-color: #d9d9d9; box-shadow: 0 4px 11px rgba(0, 0, 0, 0.3); padding: 2%; font-weight: 400;">
-            Somos referência no mercado da beleza do Rio de Janeiro, por meio de nossos tratamentos de qualidade, <br>
-            tecnologia de ponta, e olhar artístico sobre as características de cada cliente. <br> 
+        <h1 class="animate">Carvi Clinic: conheça nosso trabalho</h1>
+        <p style="background-color: #d9d9d9; box-shadow: 0 4px 11px rgba(0, 0, 0, 0.3); padding: 2%; font-weight: 400; line-height: 5dvh; padding: 2% 5%;">
+            Somos referência no mercado da beleza do Rio de Janeiro, por meio de nossos tratamentos de qualidade, 
+            tecnologia de ponta, e olhar artístico sobre as características de cada cliente. 
             Veja nossos procedimentos mais famosos:
         </p>
 
         <div class="img-procedimentos">
-            <a href="procedimentos.php"><img src="imagens da clinica/Harmonização.jpg" alt=""><p>Harmonização facial</p></a>
-            <a href="procedimentos.php"><img src="imagens da clinica/Drenagem.jpg" alt=""><p>Drenagem linfática</p></a>
-            <a href="procedimentos.php"><img src="imagens da clinica/Botox.jpg" alt=""><p>Toxina botulínica (Botox)</p></a>
+            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/Harmonização.jpg" alt=""><p>Harmonização facial</p></a>
+            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/Drenagem.jpg" alt=""><p>Drenagem linfática</p></a>
+            <a href="procedimentos.php" class="animate animate-right"><img src="imagens da clinica/Botox.jpg" alt=""><p>Toxina botulínica (Botox)</p></a>
         </div>
         
         <div class="img-procedimentos-dois">
-            <a href="procedimentos.php"><img src="imagens da clinica/Preenchimento labial.jpg" alt=""><p>Preenchimento com ácido hialurônico</p></a>
-            <a href="procedimentos.php"><img src="imagens da clinica/Lipo.jpg" alt=""><p>Lipo enzimática</p></a>
-            <a href="procedimentos.php"><img src="imagens da clinica/Limpeza de pele.jpg" alt=""><p>Limpeza de pele profunda</p></a>
+            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/Preenchimento labial.jpg" alt=""><p>Preenchimento com ácido <br> hialurônico</p></a>
+            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/Lipo.jpg" alt=""><p>Lipo enzimática</p></a>
+            <a href="procedimentos.php" class="animate animate-right"><img src="imagens da clinica/Limpeza de pele.jpg" alt=""><p>Limpeza de pele <br> profunda</p></a>
         </div>
 
-        <div class="botao-procedimentos"><a href="procedimentos.php">VER TODOS OS PROCEDIMENTOS</a></div>
+        <button class="botao-procedimentos"><a href="procedimentos.php">VER TODOS OS PROCEDIMENTOS</a></button>
      </section>
 
     <!-- Depoimentos -->
-    <h1 class="titulo-principal-depoimentos">DEPOIMENTOS</h1>
-    <div class="depoimentos">
+    <h1 class="titulo-principal-depoimentos animate">DEPOIMENTOS</h1>
+    <div class="depoimentos animate">
         <p class="titulo-depoimento">Aurélia R, 57 anos</p>
         <P class="texto-depoimento">"Resultados incríveis e superaram minhas expectativas! <br>
         A equipe é muito profissional. <br>
@@ -63,7 +63,7 @@
         Recomendo pela excelência e segurança."</P>
     </div>
 
-    <div class="depoimentos">
+    <div class="depoimentos animate">
         <p class="titulo-depoimento">Ricardo F, 41 anos</p>
         <P class="texto-depoimento">"Clínica maravilhosa, ambiente acolhedor <br>
         e atendimento impecável. Senti total confiança na equipe, <br>
@@ -71,7 +71,7 @@
         como eu queria, sem exageros."</P>
     </div>
 
-    <div class="depoimentos">
+    <div class="depoimentos animate">
         <p class="titulo-depoimento">Juliana M, 29 anos</p>
         <P class="texto-depoimento">"Não é só estética, é autoestima! <br>
         Gostei muito do acompanhamento pós-procedimento. <br>
@@ -80,21 +80,42 @@
     
     <!--Seção Nossos Profissionais-->
     
-    <h1 class="titulo-nossos-profissionais">NOSSOS PROFISSIONAIS</h1>
+    <h1 class="titulo-nossos-profissionais animate">NOSSOS PROFISSIONAIS</h1>
     <section class="nossos-profissionais">
-        <div class="img-e-nome"><img src="Dr. Filipe Duarte home.png" alt="Dr. Filipe Duarte"> 
+        <div class="img-e-nome animate animate-left"><img src="Dr. Filipe Duarte home.png" alt="Dr. Filipe Duarte"> 
             <p>Dr. Filipe Duarte <br>
             Formação: Cirurgião-dentista
         </p></div>
-        <div class="img-e-nome"><img src="Dra. Melânia Pênedo home.png" alt="Dra. Melânia Pênedo"> 
+        <div class="img-e-nome animate"><img src="Dra. Melânia Pênedo home.png" alt="Dra. Melânia Pênedo"> 
             <p>Dra. Melânia Pênedo <br>
             Formação: Farmacêutica e <br> Cosmetóloga
         </p></div>
-        <div class="img-e-nome"><img src="Dra. Marina Pinheiro home.png" alt="Dra. Marina Pinheiro"> 
+        <div class="img-e-nome animate animate-right"><img src="Dra. Marina Pinheiro home.png" alt="Dra. Marina Pinheiro"> 
             <p>Dra. Marina Pinheiro <br>
             Formação: Médica
         </p></div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate");
+
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                },
+            {
+                threshold: 0.2
+            }
+        );
+
+        elements.forEach(el => observer.observe(el));
+        });
+    </script>
+
 </body>
     <script src="banner.js"></script>
 </html> 
@@ -102,3 +123,5 @@
 <?php
     include("footer.php");
 ?>
+
+

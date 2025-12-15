@@ -19,7 +19,7 @@
 
 <h1 class="titulo-sobre-nos">SOBRE NÓS</h1>
     
-    <div class="sobre-nos">
+    <div class="sobre-nos animate animate-left">
         <img src="imagens da clinica/Carvi Clinic foto logo.jpg" alt="">
         <div class="titulo-texto">
         <h1 id="titulo-um">Sobre a Carvi Clinic</h1>
@@ -33,7 +33,7 @@
 
     <!--Diferencial da Carvi Clinic-->
     <h1 class="titulo-diferencial">Nossos serviços seguem esses princípios:</h1>
-    <div class="diferencial">
+    <div class="diferencial animate">
         <p>
             <strong>Tratamentos Personalizados</strong> <br><br> Cada cliente recebe um plano de tratamento desenhado exclusivamente para suas necessidades e objetivos.
         </p>
@@ -47,7 +47,7 @@
         </p>
     </div>
 
-    <div class="sobre-nos-dois">
+    <div class="sobre-nos-dois animate animate-right">
         <img src="imagens da clinica/Imagem Sobre Nós (2).jpg" alt="">
         <div class="titulo-texto">
         <h1 id="titulo-dois">Nosso destaque no mundo da estética</h1>
@@ -61,7 +61,7 @@
     </div>
 
     <!-- Horários de funcionamento e vias de contato-->
-    <div class="horarios-contatos">
+    <div class="horarios-contatos animate">
         <h2 class="horarios">HORÁRIO DE FUNCIONAMENTO</h2>
         <p>Quinta, sexta e sábado - 9h às 18h</p>
         <h2 class="contatos">ENTRE EM CONTATO</h2>
@@ -72,7 +72,7 @@
     </div>
 
     <!--Missão, Visão, Valores-->
-    <div class="missao-visao-valores">
+    <div class="missao-visao-valores animate">
         <img src="imagens da clinica/Imagem Atendimento.jpg" alt="Atendimento">
         <div class="titulo-texto">
         <h1 class="titulo-missao-visao-valores">Nossa Missão, Visão e Valores</h1>
@@ -85,7 +85,28 @@
         </p>
         </div>
     </div>
-    
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const elements = document.querySelectorAll(".animate");
+
+                const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                },
+            {
+                threshold: 0.2
+            }
+                );
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
 </body>
 </html>
 
