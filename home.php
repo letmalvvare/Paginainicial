@@ -34,19 +34,19 @@
         <p style="background-color: #d9d9d9; box-shadow: 0 4px 11px rgba(0, 0, 0, 0.3); padding: 2%; font-weight: 400; line-height: 5dvh; padding: 2% 5%;">
             Somos referência no mercado da beleza do Rio de Janeiro, por meio de nossos tratamentos de qualidade, 
             tecnologia de ponta, e olhar artístico sobre as características de cada cliente. 
-            Veja nossos procedimentos mais famosos:
+            <br> Veja nossos procedimentos mais famosos:
         </p>
 
         <div class="img-procedimentos">
-            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/Harmonização.jpg" alt=""><p>Harmonização facial</p></a>
-            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/Drenagem.jpg" alt=""><p>Drenagem linfática</p></a>
+            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/PeelingQuimico.jpeg" alt=""><p>Peeling Químico</p></a>
+            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/LimpezaP.png" alt=""><p>Limpeza de pele <br> profunda</p></a>
             <a href="procedimentos.php" class="animate animate-right"><img src="imagens da clinica/Botox.jpg" alt=""><p>Toxina botulínica (Botox)</p></a>
         </div>
         
         <div class="img-procedimentos-dois">
-            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/Preenchimento labial.jpg" alt=""><p>Preenchimento com ácido <br> hialurônico</p></a>
-            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/Lipo.jpg" alt=""><p>Lipo enzimática</p></a>
-            <a href="procedimentos.php" class="animate animate-right"><img src="imagens da clinica/Limpeza de pele.jpg" alt=""><p>Limpeza de pele <br> profunda</p></a>
+            <a href="procedimentos.php" class="animate animate-left"><img src="imagens da clinica/MassagemR.jpg" alt=""><p>Massagem Relaxante</p></a>
+            <a href="procedimentos.php" class="animate"><img src="imagens da clinica/Modeladora.jpg" alt=""><p>Modeladora Corporal</p></a>
+            <a href="procedimentos.php" class="animate animate-right"><img src="imagens da clinica/Drenagem.jpg" alt=""><p>Drenagem Linfática</p></a>
         </div>
 
         <button class="botao-procedimentos"><a href="procedimentos.php">VER TODOS OS PROCEDIMENTOS</a></button>
@@ -82,15 +82,15 @@
     
     <h1 class="titulo-nossos-profissionais animate">NOSSOS PROFISSIONAIS</h1>
     <section class="nossos-profissionais">
-        <div class="img-e-nome animate animate-left"><img src="Dr. Filipe Duarte home.png" alt="Dr. Filipe Duarte"> 
+        <div class="img-e-nome animate animate-left"><img src="./Imagens Profissionais/Dr. Filipe Duarte home.png" alt="Dr. Filipe Duarte"> 
             <p>Dr. Filipe Duarte <br>
             Formação: Cirurgião-dentista
         </p></div>
-        <div class="img-e-nome animate"><img src="Dra. Melânia Pênedo home.png" alt="Dra. Melânia Pênedo"> 
+        <div class="img-e-nome animate"><img src="./Imagens Profissionais/Dra. Melânia Pênedo home.png" alt="Dra. Melânia Pênedo"> 
             <p>Dra. Melânia Pênedo <br>
             Formação: Farmacêutica e <br> Cosmetóloga
         </p></div>
-        <div class="img-e-nome animate animate-right"><img src="Dra. Marina Pinheiro home.png" alt="Dra. Marina Pinheiro"> 
+        <div class="img-e-nome animate animate-right"><img src="./Imagens Profissionais/Dra. Marina Pinheiro home.png" alt="Dra. Marina Pinheiro"> 
             <p>Dra. Marina Pinheiro <br>
             Formação: Médica
         </p></div>

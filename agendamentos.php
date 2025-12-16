@@ -2,7 +2,7 @@
 require "conexao.php";
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: agendamentos.html");
+    header("Location: agendamentoshome.php");
     exit;
 }
 
@@ -22,7 +22,7 @@ if (!$stmt) {
 }
 $stmt->bind_param("ssss", $nome, $tel, $email, $data);
 if ($stmt->execute()) {
-    header("Location: agendamentos.html?sucesso=1");
+    header("Location: agendamentoshome.php?sucesso=1");
     exit;
 } else {
     die("Erro ao salvar: " . $stmt->error);

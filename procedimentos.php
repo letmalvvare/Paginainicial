@@ -19,6 +19,7 @@
   <div class="container-proc">
     <div class="header-proc">
       <h1 class="procedimentoh1">PROCEDIMENTOS</h1>
+      <p class="ptop"style="background-color: #d9d9d9; box-shadow: 0 4px 11px rgba(0, 0, 0, 0.3); padding: 2%; font-weight: 400; line-height: 5dvh; padding: 2% 5%;">Descubra a harmonia perfeita para o seu rosto e seu corpo! Exploramos as mais avançadas técnicas de estética, combinando ciência e inovação. Deixe-nos guiá-lo numa jornada de realce e rejuvenescimento, revelando a sua melhor versão!</p>
       <nav class="menu-proc">
         <button class="btn-proc ativo-proc" data-section="corporais">Corporais</button>
         <button class="btn-proc" data-section="faciais">Faciais</button>
@@ -33,53 +34,53 @@
       corporais: [
         {
           nome: "Massagem Relaxante",
-          imagem:  "MassagemRelaxante.webp",
-          imagemDetalhe: "Paginainicial/MassagemRelaxante.webp",
+          imagem:  "imagens da clinica/MassagemR.jpg",
+          imagemDetalhe: "imagens da clinica/MassagemR.jpg",
           descricao: "Sessão de massagem com movimentos suaves e profundos, pensada para aliviar tensões, melhorar a circulação e promover profundo relaxamento corporal.",
-          antes: "MassagemRelaxante.webp",
-          depois: "MassagemRelaxante.webp"
+          antes: "./Imagens Procedimentos/Massagem antes.png",
+          depois: "./Imagens Procedimentos/Massagem depois.png"
         },
         {
           nome: "Drenagem Linfática",
-          imagem: "DrenagemLinfatica.jpeg",
-          imagemDetalhe: "DrenagemLinfatica.jpeg",
+          imagem: "./imagens da clinica/Drenagem.jpg",
+          imagemDetalhe: "./imagens da clinica/Drenagem.jpg",
           descricao: "Técnica manual que estimula o sistema linfático, auxiliando na redução de inchaços e retenção de líquidos.",
-          antes: "DrenagemLinfatica.jpeg",
-          depois: "DrenagemLinfatica.jpeg"
+          antes: "./Imagens Procedimentos/Drenagem antes.png",
+          depois: "./Imagens Procedimentos/Drenagem depois.png"
         },
         {
           nome: "Modeladora Corporal",
-          imagem: "ModeladoraCorporal.jpeg",
-          imagemDetalhe: "ModeladoraCorporal.jpeg",
+          imagem: "imagens da clinica/Modeladora.jpg",
+          imagemDetalhe: "imagens da clinica/Modeladora.jpg",
           descricao: "Massagem profunda e enérgica que ajuda a modelar o contorno corporal e ativar a circulação.",
-          antes: "ModeladoraCorporal.jpeg",
-          depois: "ModeladoraCorporal.jpeg"
+          antes: "./Imagens Procedimentos/Modeladora antes.png",
+          depois: "./Imagens Procedimentos/Modeladora depois.png"
         }
       ],
       faciais: [
         {
           nome: "Limpeza de Pele Profunda",
-          imagem: "limpezadePeleProfunda.jpeg",
-          imagemDetalhe: "limpezadePeleProfunda.jpeg",
+          imagem: "imagens da clinica/LimpezaP.png",
+          imagemDetalhe: "imagens da clinica/LimpezaP.png",
           descricao: "Procedimento para remoção de impurezas e células mortas, promovendo renovação e viço natural à pele do rosto.",
-          antes: "limpezadePeleProfunda.jpeg",
-          depois: "limpezadePeleProfunda.jpeg"
+          antes: "./Imagens Procedimentos/Limpeza de pele Antes.png",
+          depois: "./Imagens Procedimentos/Limpeza de pele Depois.png"
         },
         {
           nome: "Peeling Químico",
-          imagem: "PeelingQuimico.jpeg",
-          imagemDetalhe: "PeelingQuimico.jpeg",
+          imagem: "imagens da clinica/PeelingQuimico.jpeg",
+          imagemDetalhe: "imagens da clinica/PeelingQuimico.jpeg",
           descricao: "Aplicação controlada de agentes químicos que estimulam renovação celular e uniformizam o tom da pele.",
-          antes: "PeelingQuimico.jpeg",
-          depois: "PeelingQuimico.jpeg"
+          antes: "./Imagens Procedimentos/Peeling químico antes.png",
+          depois: "./Imagens Procedimentos/Peeling Químico depois.png"
         },
         {
           nome: "Aplicação de Botox",
-          imagem: "botox.jpeg",
-          imagemDetalhe: "botox.jpeg",
+          imagem: "imagens da clinica/Botox.jpg",
+          imagemDetalhe: "imagens da clinica/Botox.jpg",
           descricao: "Procedimento para suavizar rugas e linhas de expressão, com resultado natural e rápido.",
-          antes: "botox.jpeg",
-          depois: "botox.jpeg"
+          antes: "./Imagens Procedimentos/botox antes.png",
+          depois: "./Imagens Procedimentos/botox depois.png"
         }
       ]
     };
